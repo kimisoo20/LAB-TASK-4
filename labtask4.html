@@ -1,0 +1,162 @@
+<html>
+<style>
+body {
+   background: linear-gradient(to right, #85CBCC, #A8DEE0, #F9E2AE);
+   font-family: 'Poppins', sans-serif;
+   width: auto; 
+   length:auto;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	  background-color: White;
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.button {
+  background-color: #008CBA; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.animated {
+    font-size: 1.9rem;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0px;
+    background: linear-gradient(to right, #09F7D3 50%, #5f2c82 50%, #49a09d);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s ease-out;
+	margin-bottom: 0px;
+	padding: 30px;
+	margin: auto;
+	text-align: center;
+     }
+	 
+    .animated:hover {
+                     background-position: -70%;
+                    }
+					
+	.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 3%;
+    background-color: #181818;
+	
+	u { 
+  text-decoration: underline;
+}
+
+
+</style>
+ <head>
+  <title>LABTASK4-F1017</title>
+      <script type="text/javascript">
+         <!--
+            function ClickLa() {
+               alert("Area Of Trapezium")
+			    var temp = document.getElementsByTagName("template")[0];
+              var clon = temp.content.cloneNode(true);
+           document.body.appendChild(clon);
+            }
+         //-->
+      </script>
+ </head>
+ <body>
+  <center><h1><u>This page is to calculate Area of Trapezium</h1>
+      <center>
+      <form>
+         <input type="button" class="button" onclick="ClickLa()" value="click here" />
+      </form>
+	  </center>
+	  
+	    <template>
+		<center>
+      <h2>FORMULA</h2>
+      <img src="Trapezium2.jpg" width="450" height="350">
+	  </center>
+</template>
+   
+ <p><b> Formula to calculate area of Trapezium : </b></p>
+
+ <table class = "styled-table" border = "1">
+      <tr> <td>area = ((a + b )/2)*h</td> 
+      <tbody>
+      <tr> <td>a = BaseA</td> 
+      <tr> <td>b = BaseB</td> 
+      <tr> <td>h = Height</td> 
+</table>
+
+  <h4><i> PRESS THE BUTTON TO ENTER DATA AND CALCULATE AREA OF TRAPEZIUM </i></h4>
+  <form>
+  <input type="button" class="button" value="Insert the data" onclick="calculate()">
+  </form>
+  
+  <p id="a"></p>
+  <p id="b"></p>
+  <p id="h"></p>
+  <p id="areaOfTrapezium"></p>
+  
+  <script type="text/javascript" class = "styled-table" border = "1"> 
+  document.getElementById("a").onclick = function() { calculate()};
+  document.getElementById("b").onclick = function() { calculate()};
+  document.getElementById("h").onclick = function() { calculate()};
+  document.getElementById("areaOfTrapezium").onclick = function() { calculate()};
+  
+   function ClickLa(){
+	   alert("Alert ! \AREA FOR TRAPEZIUM");
+			    var temp = document.getElementsByTagName("template")[0];
+                 var clon = temp.content.cloneNode(true);
+                  document.body.appendChild(clon);
+	 }
+  
+   function calculate(){
+	
+	 var a = parseInt(prompt("Please enter base1 of trapezium:"));
+     var b = parseInt(prompt("Please enter base2 of trapezium:"));
+     var h = parseInt(prompt("Please enter height of trapezium:"));
+     var areaOfTrapezium = ((a + b) / 2) * h;
+	 
+
+	 document.getElementById("a").innerHTML = "BaseA of trapezium: "+a;
+	 document.getElementById("b").innerHTML = "BaseB of trapezium: " +b;
+	 document.getElementById("h").innerHTML = "Height of trapezium: " +h;
+	 document.getElementById("areaOfTrapezium").innerHTML = "Area of Trapezium is: "  + areaOfTrapezium;
+
+	 }
+	 
+	 </script>
+  </center>
+ </body>
+</html>
